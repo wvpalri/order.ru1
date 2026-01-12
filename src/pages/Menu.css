@@ -1,0 +1,385 @@
+/* Основной контейнер страницы */
+.menu-page {
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    padding-top: 100px; /* Отступ под твой фиксированный хедер */
+    padding-bottom: 50px;
+}
+
+.menu-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+/* Стили фильтров (логотипов/кнопок) */
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    overflow-x: auto; /* Прокрутка, если кнопок много */
+    padding: 10px 5px;
+    scrollbar-width: none; /* Прячем скроллбар в Firefox */
+}
+
+.filter-bar::-webkit-scrollbar {
+    display: none; /* Прячем скроллбар в Chrome/Safari */
+}
+
+.filter-btn {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.filter-btn.active {
+    background: #FC8A06;
+    color: #fff;
+    border-color: #FC8A06;
+    box-shadow: 0 4px 12px rgba(252, 138, 6, 0.3);
+}
+
+.filter-btn:hover:not(.active) {
+    border-color: #FC8A06;
+    color: #FC8A06;
+}
+
+/* Сетка карточек */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Карточка блюда */
+.food-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Бейдж ресторана на карточке */
+.res-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FC8A06;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.food-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.food-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.food-card:hover .food-image-container img {
+    transform: scale(1.1);
+}
+
+.food-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.food-info h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.food-info p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Нижняя часть карточки (Цена и Кнопка) */
+.food-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-price {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+}
+
+.add-to-cart {
+    background: #FC8A06;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart:hover {
+    background: #e57c05;
+}
+.promo-progress-banner {
+    background: #fff;
+    border: 2px solid #FC8A06;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(252, 138, 6, 0.1);
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.promo-text h3 {
+    color: #FC8A06;
+    margin-bottom: 5px;
+}
+
+.success-msg {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.progress-bar-bg {
+    background: #eee;
+    height: 12px;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.cart-float-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4CAF50; /* Зеленый цвет, как у тебя в корзине на скрине */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.cart-float-btn:hover {
+    background: #45a049;
+    transform: translateX(-50%) scale(1.05);
+}
+
+.cart-float-btn span {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.cart-float-btn small {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+
+
+@media (max-width: 768px) {
+   
+    .menu-container {
+        padding: 0 10px !important; 
+        max-width: 100% !important;
+    }
+
+   
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 10px !important; 
+        width: 100% !important;
+    }
+
+    
+    .food-card {
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 12px !important; 
+    }
+
+    
+    .food-image-container {
+        height: 140px !important;
+        width: 100% !important;
+    }
+
+   
+    .food-info {
+        padding: 8px !important; 
+    }
+
+    .food-info h3 {
+        font-size: 14px !important;
+        white-space: normal !important;
+        word-wrap: break-word;
+    }
+
+    /* 6. Кнопка и цена */
+    .food-price {
+        font-size: 16px !important;
+    }
+
+    .add-to-cart {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-page {
+        padding-top: 20px; 
+    }
+
+    .menu-title {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    
+    .filter-bar {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+        padding: 10px 0;
+        margin-bottom: 25px;
+    }
+
+    .filter-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px;
+    }
+
+    
+    .food-card {
+        border-radius: 15px;
+    }
+
+    .food-image-container {
+        height: 130px; 
+    }
+
+    .food-info {
+        padding: 12px;
+    }
+
+    .food-info h3 {
+        font-size: 15px;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+
+    .food-info p {
+        display: none; 
+    }
+
+    .food-price {
+        font-size: 16px;
+    }
+
+    .add-to-cart {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+        border-radius: 8px;
+    }
+
+   
+    .res-tag {
+        top: 8px;
+        left: 8px;
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .food-grid {
+        gap: 8px;
+    }
+
+    .food-info h3 {
+        font-size: 14px;
+    }
+
+    .cart-float-btn {
+        width: 90%;
+        bottom: 20px;
+        padding: 12px;
+    }
+    
+    .cart-float-btn span {
+        font-size: 16px;
+    }
+}

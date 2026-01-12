@@ -1,0 +1,297 @@
+
+
+
+
+
+.deal-section{
+    max-width: 1500px;
+    margin: auto;
+    margin-left: 100px;
+   
+}
+.deal-menu{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 230px;
+}
+.deal-text h1{
+    font-size: 22px;
+    font-weight: 800;
+}
+.menuu{
+    display: flex;
+    gap: 10px;
+    color: #FC8A06;
+}
+.menuu li{
+    text-decoration: none;
+    list-style: none;
+     color: #FC8A06;
+}
+.menuu li a{
+    color: #000000;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+
+}
+
+
+.menuu{
+    padding: 0;
+    margin: 10px 0;
+}
+.menuu li {
+    margin: 0 10px; /* Расстояние между пунктами */
+}
+
+/* 1. Базовый стиль */
+.menuu li a {
+    text-decoration: none; 
+    color: #333;           
+    font-size: 18px;   
+    font-weight: 100;    
+    padding: 10px 20px;    
+    border-radius: 30px;   
+    border: 2px solid transparent; /* <-- КЛЮЧ: Резервируем место */
+    transition: all 0.2s ease-out; 
+    display: inline-block;
+}
+
+/* 2. Стиль для активного элемента */
+
+
+
+
+.tri-photo{
+    display: flex;
+    gap: 30px;
+}
+.tri-photo img{
+    width: 380px;
+}
+.categori-menu{
+    display: flex;
+    gap: 14px;
+}
+.categori-menu img{
+    width: 190px;
+}
+.categoris{
+    margin-top: 50px;
+}
+.text-categor h1{
+   padding-bottom: 30px;
+   font-size: 22px;
+   font-weight: 800;
+}
+.categori-menu h1{
+   text-decoration: none;
+   list-style: none;
+   font-size: 15px;
+   color: #03081F;
+   /* text-align: center; */
+   padding-left:23px;
+   padding-bottom: 3px;
+}
+.cati a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 11px;
+}
+.cati p{
+    padding-left: 23px;
+    color: #FC8A06;
+}
+.cati{
+    border: 1px solid #F5F5F5;
+    border-radius: 9px;
+}
+
+.popular-rest{
+    margin-top: 40px;
+   
+}
+
+.popular-rest h1{
+    padding-bottom: 20px;
+    font-size: 23px;
+    font-weight: 800;
+}
+.res-pop img{
+    width: 190px;
+    height: 195px;
+    border-radius: 25px;
+}
+.pop-rest-menu{
+    display: flex;
+    gap: 15px;
+}
+.res-pop h1{
+    font-size: 15px;
+    text-align: center;
+    padding-top: 5px;
+   
+}
+.res-pop a{
+     text-decoration: none;
+    list-style: none;
+    color: white;
+}
+.res-pop{
+    margin-bottom: 30px;
+    border: 1px solid  #F5F5F5;
+    border-radius: 25px;
+    /* background-color: #FC8A06; */
+     transition: transform 0.3s ease;
+}
+.res-pop:hover{
+     transform: translateY(-10px);
+     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+/* Контейнер сетки */
+.deals-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* По умолчанию в одну колонку */
+  gap: 24px;
+}
+
+/* Адаптивность: 3 колонки для компьютеров */
+@media (min-width: 768px) {
+  .deals-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Основная карточка */
+.deal-card-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #03081F; /* Темно-синий/черный фон как на фото */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Изображение с эффектом затемнения и анимацией */
+.deal-card-image {
+  width: 100%;
+  height: 200px; /* Фиксированная высота как на макете */
+  object-fit: cover;
+  opacity: 0.7; /* Затемнение для читаемости текста */
+  transition: transform 0.3s ease;
+}
+
+.deal-card-container:hover .deal-card-image {
+  transform: scale(1.05); /* Увеличение при наведении */
+}
+
+
+.deal-card-badge {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background-color: #03081F;
+  color: white;
+  padding: 12px 18px;
+  font-weight: 800;
+  font-size: 1.125rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+
+.deal-card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.deal-card-tag {
+  color: #FC8A06;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.deal-card-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+
+
+@media screen and (max-width: 768px) {
+   
+    .categori-menu, .pop-rest-menu {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 0 15px;
+       
+        justify-content: center; 
+        justify-items: center; 
+        margin: 0 auto;
+    }
+
+   
+    .res-pop, .categori-menu > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .pop-rest-menu{
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .categori-menu img, .res-pop img {
+        width: 100% !important;
+        max-width: 180px;
+        margin: 0 auto;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .res-pop img {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .res-pop {
+        transition: transform 0.3s ease;
+    }
+
+    .res-pop:hover {
+        transform: translateY(-10px);
+    }
+
+    .text-categor h1, .popular-rest h1 {
+        text-align: center;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .categori-menu, .pop-rest-menu {
+        /* Уменьшаем колонки для совсем маленьких экранов, чтобы всё влезло */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+    }
+
+    .deal-card-title {
+        font-size: 1rem;
+    }
+    
+    .categori-menu h1, .res-pop h1 {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+}

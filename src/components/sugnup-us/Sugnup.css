@@ -1,0 +1,675 @@
+.sugnup-cards{
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 40px;
+  
+}
+.sugnup-bloks{
+    margin-left: 40px;
+    display: flex;
+    gap: 24px;
+}
+
+.cards{
+    position: relative;
+    width: 600px;
+    max-width: 650px;
+    height: 350px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-size: cover;
+    background-position: center;
+}
+.cards-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ff8c00; 
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 8px 0 8px 0;
+}
+.cards h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.cards h3 {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+.btn-ord{
+    display: inline-block;
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn-ord:hover{
+    background-color: #e67e00;
+}
+.partner-cards {
+    /* Используем фоновое изображение для повара */
+    background-image: url('../../assets/povar.png'); 
+    background-color: #000;
+}
+.rider-card {
+    /* Используем фоновое изображение для курьера */
+    background-image: url('../../assets/kyrier.png');
+    background-color: #f9d71c; /* Желтый фон */
+    color: #333; /* Черный текст для контраста с желтым фоном */
+}
+.rider-cards h2, .rider-cards h3 {
+    color: #000;
+}
+.sugnup-bloks {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: 380px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+}
+
+/* Эффект при наведении на всю карточку */
+.cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.cards-tag {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  background: #FC8019;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 0 0 10px 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cards h2 {
+  color: #FC8019;
+  font-size: 18px;
+  margin: 0;
+}
+
+.cards h3 {
+  color: white;
+  font-size: 32px;
+  margin: 10px 0 20px 0;
+}
+
+.btn-ord {
+  background: #FC8019;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+/* Эффект при наведении на саму кнопку */
+.btn-ord:hover {
+  background: #e67316;
+  transform: scale(1.05);
+}
+
+
+/* Фон модалки (затемнение) */
+/* Оверлей должен перекрывать ВЕСЬ экран */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;   /* На всю ширину окна */
+  height: 100vh;  /* На всю высоту окна */
+  background: rgba(0, 0, 0, 0.75); /* Темный полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;  /* Чтобы было поверх хедера и всего остального */
+  backdrop-filter: blur(4px); /* Эффект размытия заднего плана */
+}
+
+/* Контент самого окна */
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  color: #333; /* Явный цвет текста, чтобы не был белым */
+  text-align: center;
+}
+
+/* Кнопка закрытия (крестик) */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Чтобы форма внутри выглядела аккуратно */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal-content input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+/* Фикс, который мы нашли через красный тест */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85); /* Полупрозрачный черный */
+  backdrop-filter: blur(5px);    /* Красивое размытие фона */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;               /* Поверх всего! */
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header h2 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.modal-header p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.btn-submit {
+  background: #FC8019;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: #e67316;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+}
+
+
+/* КАРТОЧКИ */
+.sugnup-bloks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* МОДАЛКА - ГЛАВНЫЙ ФИКС */
+.modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 999999 !important;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: white !important;
+  padding: 30px !important;
+  border-radius: 20px !important;
+  width: 90% !important;
+  max-width: 400px !important;
+  position: relative !important;
+  color: #333 !important;
+  text-align: center !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+}
+
+/* Адаптивные поля ввода */
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box; /* Чтобы padding не раздувал input */
+}
+
+.btn-submit {
+  width: 100%;
+  background: #FC8019;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #999;
+}
+.sugnup-bloks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cards {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  height: 350px;
+  background-color: #333; /* Временный фон, если картинки не грузятся */
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* СТИЛИ МОДАЛКИ - ТУТ ВАЖЕН КАЖДЫЙ ПУНКТ */
+.modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 999999 !important; /* Больше, чем у любого хедера */
+}
+
+.modal-content {
+  background: white !important;
+  padding: 40px !important;
+  border-radius: 20px !important;
+  width: 90% !important;
+  max-width: 400px !important;
+  position: relative !important;
+  text-align: center !important;
+  color: #000 !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.btn-submit {
+  width: 100%;
+  background: #FC8019;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+}
+/* Контейнер модалки */
+.modal-content-new {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 900px;
+    width: 95%;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.form-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #03081F;
+}
+
+.form-header p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Строка с инпутами */
+.inputs-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.inputs-row input {
+    padding: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.inputs-row input:focus {
+    border-color: #fc8019;
+}
+
+/* Нижняя строка с кнопкой и плашкой */
+.form-footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.btn-submit-orange {
+    background: #fc8019;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.btn-submit-orange:hover {
+    background: #e67213;
+    transform: translateY(-2px);
+}
+
+/* Зеленая плашка */
+.riders-count-badge {
+    background: #43b02a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.check-icon {
+    background: rgba(255,255,255,0.2);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.signup-section-wrapper {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #f8f9fb; /* Светлый фон всей секции */
+    display: flex;
+    justify-content: center;
+}
+
+.signup-block-content {
+    background: white;
+    max-width: 1100px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Легкая тень */
+}
+
+.form-header-simple h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #03081F;
+}
+
+.form-header-simple p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Сетка инпутов в одну линию */
+.form-inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.form-inputs-grid input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    font-size: 16px;
+    background: #FFF;
+    transition: 0.2s;
+}
+
+.form-inputs-grid input:focus {
+    border-color: #fc8019;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(252, 128, 25, 0.1);
+}
+
+/* Нижняя панель */
+.form-actions-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.orange-submit-btn {
+    background-color: #fc8019;
+    color: white;
+    border: none;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.orange-submit-btn:hover {
+    background-color: #e67213;
+    transform: translateY(-2px);
+}
+
+.courier-badge-green {
+    background-color: #43b02a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge-check {
+    background: rgba(255, 255, 255, 0.2);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+
+@media (max-width: 768px) {
+    .form-inputs-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-actions-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 768px) {
+    .inputs-row { grid-template-columns: 1fr; }
+    .form-footer-row { flex-direction: column; align-items: stretch; }
+}
+@media (max-width: 600px) {
+  .form-inputs-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .signup-block-content {
+    padding: 20px; 
+  }
+
+  .form-actions-row {
+    flex-direction: column; 
+    align-items: stretch;
+  }
+
+  .orange-submit-btn {
+    width: 100%; 
+  }
+}

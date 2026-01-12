@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: sans-serif;
+   
+}
+/* Добавь это в самый верх CSS файла */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Чтобы при скролле заголовок не прятался под прилипающее меню (если оно есть) */
+section {
+  scroll-margin-top: 100px; /* Отступ сверху, чтобы заголовок не прилипал к краю */
+}

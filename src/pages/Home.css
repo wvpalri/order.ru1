@@ -1,0 +1,28 @@
+
+@media (max-width: 992px) {
+  
+  .hero-section { 
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding-top: 50px;
+  }
+
+  .hero-image {
+    display: none; 
+  }
+
+ 
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+
+  .restaurants-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}

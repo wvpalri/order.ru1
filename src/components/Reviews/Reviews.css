@@ -1,0 +1,348 @@
+.reviews-section {
+  background-color: #f3f3f3;
+  padding: 60px 10%;
+  text-align: left;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.reviews-nav .nav-btn {
+  background: #fc8019;
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.reviews-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden; /* Для полноценного слайдера нужна библиотека, но для диплома можно оставить так */
+}
+
+.review-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  min-width: 350px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info h4 { margin: 0; font-size: 16px; }
+.user-loc { margin: 0; color: #fc8019; font-size: 14px; }
+
+.review-date { font-size: 12px; color: #999; margin-top: 5px; }
+
+.review-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.overall-rating {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.overall-rating h1 { font-size: 64px; margin: 0; }
+.overall-stars { font-size: 24px; margin-bottom: 10px; }
+
+
+.add-review-form {
+  margin-top: 40px;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 20px;
+  max-width: 600px;
+}
+
+.add-review-form h3 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.add-review-form input, 
+.add-review-form select, 
+.add-review-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+.add-review-form input { flex: 2; }
+.add-review-form select { flex: 1; }
+
+.add-review-form textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 15px;
+  resize: none;
+}
+
+.submit-review-btn {
+  background: #ff8a00;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.submit-review-btn:hover {
+  background: #e67e00;
+}
+/* Контейнер для двух колонок */
+.reviews-layout {
+  display: flex;
+  gap: 40px; /* Расстояние между формой и отзывами */
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* Форма слева (занимает 40% ширины) */
+.add-review-form {
+  flex: 4;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 20px;
+  position: sticky; /* Чтобы форма не уезжала при скролле */
+  top: 20px;
+}
+
+/* Список отзывов справа (занимает 60% ширины) */
+.reviews-list-side {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 600px; /* Ограничим высоту, чтобы не была слишком длинной */
+  overflow-y: auto; /* Добавим внутреннюю прокрутку, если отзывов много */
+  padding-right: 10px;
+}
+
+/* Мини-карточка отзыва */
+.review-card-mini {
+  background: white;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.review-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.review-user h4 { margin: 0; font-size: 16px; }
+
+.review-text-mini {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+.review-date-mini {
+  font-size: 12px;
+  color: #aaa;
+}
+.reviews-section {
+  padding: 50px 5%;
+  background-color: #fcfcfc;
+}
+
+.reviews-container {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* Форма слева */
+.reviews-form-side {
+  flex: 1;
+  position: sticky;
+  top: 100px;
+}
+
+.add-review-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Отзывы справа */
+.reviews-content-side {
+  flex: 2;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.review-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.new-entry {
+  border: 2px solid #ff8a00; 
+  animation: slideIn 0.5s ease;
+}
+
+.reviews-form-side {
+  flex: 1;
+  position: sticky;
+  top: 100px;
+}
+
+.reviews-form-side h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.add-review-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Мягкая тень */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #f0f0f0;
+}
+
+
+.add-review-card input, 
+.add-review-card .review-select, 
+.add-review-card textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fcfcfc;
+}
+
+
+.add-review-card input:focus, 
+.add-review-card .review-select:focus, 
+.add-review-card textarea:focus {
+  border-color: #ff8a00;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.1);
+}
+
+
+.add-review-card textarea {
+  height: 120px;
+  resize: none;
+}
+
+
+.add-review-card button {
+  background-color: #ff8a00;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 5px;
+}
+
+.add-review-card button:hover {
+  background-color: #e67e00;
+}
+
+.add-review-card button:active {
+  transform: scale(0.98); 
+}
+
+
+.review-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23777' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.review-body {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 900px) {
+  .reviews-container { flex-direction: column; }
+  .reviews-form-side { position: static; width: 100%; }
+}
+
+.reviews-list-side::-webkit-scrollbar { width: 6px; }
+.reviews-list-side::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; }

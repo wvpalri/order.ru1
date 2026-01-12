@@ -1,0 +1,641 @@
+/* Контейнер всей страницы */
+.restaurant-page {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовок секции */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 24px;
+  /* font-weight: bold; */
+  font-weight: 800;
+}
+
+/* Сетка карточек (3 в ряд) */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  gap: 24px;
+}
+
+/* Адаптивность для мобилок (1 колонка) */
+@media (max-width: 768px) {
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Карточка оффера */
+.offer-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 256px;
+  width: 350px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover .offer-image {
+  transform: scale(1.1); /* Эффект увеличения картинки при наведении */
+}
+
+.offer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Затемнение снизу вверх (градиент) */
+.offer-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+/* Черный значок скидки */
+.discount-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: black;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Текст внутри карточки */
+.offer-details {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  color: white;
+}
+
+.restaurant-name {
+  font-size: 12px;
+  color: #FC8019; /* Оранжевый цвет как на макете */
+  margin-bottom: 4px;
+}
+
+.offer-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #FC8019; /* Меняется на оранжевый при наведении */
+  color: white;
+}
+
+.plus-icon {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+/* Сетка карточек по 4 в ряд (или 3, если экран меньше) */
+/* Общий фон страницы (сделаем его очень светло-серым, почти белым) */
+.restaurant-page {
+    background-color: #F9FAFB;
+    padding-bottom: 60px;
+}
+
+/* Сетка: 4 аккуратные колонки */
+.burger-grid {
+    display: grid;
+    /* Изменили с repeat(4, 1fr) на repeat(3, 1fr) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Больше пространства между карточками */
+    padding: 20px;
+    max-width: 1400px; /* Увеличили общий контейнер */
+    margin: 0 auto;
+}
+
+/* Компактная карточка */
+.burger-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column; /* Элементы друг под другом */
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #F1F5F9;
+}
+
+.burger-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+/* Контейнер изображения */
+.burger-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10; /* Прямоугольное фото выглядит современнее */
+    overflow: hidden;
+}
+
+.burger-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.burger-card:hover .burger-img {
+    transform: scale(1.08); /* Легкий зум при наведении */
+}
+
+/* Кнопка плюс (минималистичная) */
+.add-to-cart-btn-small {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: #FFFFFF;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%; /* Круглая кнопка выглядит аккуратнее */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.plus-icon {
+    font-size: 20px;
+    color: #111827;
+    line-height: 1;
+}
+
+/* Текстовая часть */
+.burger-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.burger-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Если название длинное, оно красиво сократится */
+}
+
+.burger-description {
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 1.4;
+    height: 2.8em;
+    overflow: hidden;
+    margin: 4px 0;
+}
+
+.burger-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 8px;
+    display: block;
+}
+/* 1. Контейнер для картинки — делаем его фиксированным и аккуратным */
+/* Контейнер для картинки */
+.burger-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px; /* Фиксированная высота — это база аккуратности */
+    background-color: #f8f9fa; /* Светлый нейтральный фон для всех */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* ВАЖНО: padding создает "рамку", чтобы предметы были одного масштаба */
+    padding: 20px; 
+    border-radius: 12px 12px 0 0;
+}
+
+/* Сама картинка */
+.burger-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    /* 'contain' гарантирует, что мы видим весь чайник/бургер целиком */
+    object-fit: contain; 
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Эффект при наведении на КАРТОЧКУ (а не только на фото) */
+.burger-card:hover .burger-img {
+    transform: scale(1.1); /* Легкое изящное увеличение */
+}
+
+/* Если в некоторых разделах картинки все равно кажутся мелкими */
+.burger-image-wrapper img[src*="tea"], 
+.burger-image-wrapper img[src*="drinks"] {
+    padding: 10px; /* Уменьшаем отступ для напитков, если они кажутся мелкими */
+}
+/* 3. Кнопка "плюс" — аккуратная и в одном месте у всех */
+.add-to-cart-btn-small {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 10;
+}
+.add-to-cart-btn-small:hover{
+  background-color: #FC8019;
+}
+.restaurant-block {
+    margin-bottom: 60px; /* Отступ между разными ресторанами */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.restaurant-group-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.mini-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.restaurant-main-layout {
+  display: flex; /* Магия Flexbox: ставит элементы в ряд */
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.restaurant-content-section {
+  flex: 1; /* Правая часть забирает всё свободное место */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Сайдбар должен быть липким при скролле */
+.sidebar-menu {
+  position: sticky;
+  top: 20px;
+}
+.restaurant-main-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1600px; /* Ширина побольше, чтобы влезло 3 колонки */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.restaurant-content-section {
+  flex: 2; /* Центральная часть самая широкая */
+  min-width: 500px;
+}
+
+.restaurant-map-aside {
+  flex: 0.8; /* Правая часть с картой чуть уже */
+  min-width: 320px;
+
+ 
+}
+
+.map-sticky-box {
+  position: sticky;
+  top: 20px; /* Карта будет "залипать" при скролле */
+}
+
+.map-info-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  color: white;
+}
+
+.map-info-card h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.map-info-card p {
+  margin-bottom: 8px;
+  color: #ccc;
+  font-size: 14px;
+}
+.sort-box {
+  display: flex;
+  align-items: center;
+}
+
+.sort-select {
+  /* Базовое оформление */
+  padding: 10px 35px 10px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  
+  /* Убираем стандартную стрелку и ставим свою */
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23777' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Эффект при наведении */
+.sort-select:hover {
+  border-color: #ff8a00; /* Твой фирменный оранжевый */
+  background-color: #fffaf5;
+}
+
+/* Эффект при клике (фокусе) */
+.sort-select:focus {
+  border-color: #ff8a00;
+  box-shadow: 0 0 0 3px rgba(255, 138, 0, 0.15);
+}
+/* Добавляем родительский класс для точности */
+.restaurant-page .sort-select {
+  appearance: none !important; /* !important заставит стиль примениться точно */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #ffffff !important;
+  border: 1px solid #ddd !important;
+  border-radius: 10px !important;
+  padding: 10px 35px 10px 15px !important;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23777' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+}
+
+.restaurant-page .sort-select:hover {
+  border-color: #ff8a00 !important;
+}
+
+/* Стиль для мобильных устройств */
+@media (max-width: 480px) {
+  .sort-select {
+    padding: 8px 30px 8px 12px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+}
+
+/* Адаптация */
+@media (max-width: 1024px) {
+    .burger-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+    .burger-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 10px; }
+}
+/* --- Адаптивность --- */
+@media (max-width: 1024px) {
+  .offers-grid, .burger-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+  }
+}
+
+@media (max-width: 640px) {
+  .offers-grid, .burger-grid {
+    grid-template-columns: 1fr; /* 1 колонка на телефонах */
+  }
+}
+@media (max-width: 768px) {
+    /* Главный контейнер — всё в одну колонку! */
+    .restaurant-main-layout {
+        flex-direction: column !important;
+        padding: 0 !important;
+        gap: 0 !important;
+    }
+
+    /* Боковое меню превращаем в ГОРИЗОНТАЛЬНУЮ ленту */
+    .sidebar-menu {
+        position: sticky !important;
+        top: 0 !important;
+        flex: none !important;
+        width: 100% !important;
+        height: auto !important;
+        background: #1a1a1a !important;
+        z-index: 1000 !important;
+        display: flex !important;
+        flex-direction: row !important; /* В ряд! */
+        overflow-x: auto !important; /* Скролл вбок */
+        padding: 10px !important;
+        white-space: nowrap !important;
+        gap: 10px !important;
+    }
+
+    /* Прячем ненужные элементы в мобильном меню (заголовок, поиск) */
+    .sidebar-menu h2, 
+    .sidebar-menu .search-box, 
+    .sidebar-menu .mini-logo,
+    .sidebar-menu span {
+        display: none !important;
+    }
+
+    /* Элементы меню (ссылки) делаем кнопками в ряд */
+    .sidebar-menu a, .sidebar-menu li {
+        display: inline-block !important;
+        padding: 8px 16px !important;
+        background: #333 !important;
+        border-radius: 20px !important;
+        color: #fff !important;
+        font-size: 13px !important;
+        text-decoration: none !important;
+    }
+
+    /* Контентная часть (продукты) */
+    .restaurant-content-section {
+        width: 100% !important;
+        padding: 15px !important;
+    }
+
+    /* Карта уходит в самый низ */
+    .restaurant-map-aside {
+        width: 100% !important;
+        padding: 15px !important;
+        order: 10; /* Ставит в конец */
+    }
+}
+@media (max-width: 768px) {
+    /* 1. Убираем горизонтальный скролл у всей страницы */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* 2. Контейнер сетки */
+    .burger-grid, .offers-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 колонки */
+        gap: 10px !important; /* Узкие зазоры */
+        padding: 10px !important;
+        margin-left: -30px;
+        width:100%!important;
+        box-sizing: border-box !important; /* Чтобы padding не раздувал ширину */
+    }
+
+    /* 3. САМОЕ ВАЖНОЕ: Сбрасываем фиксированную ширину карточек */
+    .burger-card, .offer-card, .food-card {
+        width: 70% !important; /* Теперь ширина зависит от колонки сетки */
+        max-width: none !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        border-radius: 12px !important;
+    }
+
+    /* 4. Настраиваем картинку внутри, чтобы она не вылезала */
+    .burger-image-wrapper, .food-image-container {
+        width: 100% !important;
+        height: 110px !important; /* Уменьшенная высота для мобилок */
+    }
+
+    .burger-img, .food-image-container img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* 5. Уменьшаем текст, чтобы всё влезло */
+    .burger-info, .food-info {
+        padding: 8px !important;
+    }
+
+    .burger-name, .food-info h3 {
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+        white-space: normal !important; /* Разрешаем перенос на новую строку */
+        margin-bottom: 5px !important;
+    }
+
+    .burger-price, .food-price {
+        font-size: 14px !important;
+        font-weight: 800 !important;
+    }
+
+   
+    .add-to-cart-btn-small, .add-to-cart {
+        width: 28px !important;
+        height: 28px !important;
+        bottom: 5px !important;
+        right: 5px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .section-header {
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0 10px !important;
+        gap: 10px !important;
+        margin-bottom: 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    
+    .section-title, .restaurant-group-header h2 {
+        font-size: 20px !important; 
+        margin: 0 !important;
+        white-space: nowrap !important;
+    }
+
+   
+    .restaurant-page .sort-select {
+       
+        transform: translateX(-15px) !important; 
+        
+        font-size: 10px !important;
+        padding: 5px 20px 5px 8px !important;
+        min-width: 100px !important;
+        max-width: 100px !important;
+        height: 30px !important;
+        border-radius: 8px !important;
+        position: relative;
+        left: -120px;
+        
+      
+        margin: 0 !important;
+    }
+    
+
+  
+    .sort-box {
+        display: flex !important;
+        justify-content: flex-end !important;
+        flex: 1 !important; 
+    }
+}
+
+

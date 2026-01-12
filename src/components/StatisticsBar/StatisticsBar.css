@@ -1,0 +1,78 @@
+/* --- Стили для компонента StatisticsBar --- */
+
+.statistics-bar-container {
+    /* Контейнер для центрирования и управления отступами */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.statistics-bar {
+    display: flex;
+    
+    background-color: #ff8c00; 
+    color: white;
+    border-radius: 12px;
+  
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.4); 
+   
+    max-width: 1200px;
+    width: 100%;
+   
+    padding: 20px 0;
+}
+
+.stat-item {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+    
+ 
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-number {
+    font-size: 2.5em; 
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.9em; 
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+
+@media (max-width: 768px) {
+    .statistics-bar {
+       
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .stat-item {
+        border-right: none;
+       
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 15px 0;
+    }
+    
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+    
+    .stat-number {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "categories": [
+    {"id": "1", "name": "Бургеры и фастфуд",  "img": "cat1.png"},
+    {"id": "2", "name": "Салаты", "img": "cat2.png"},
+    {"id": "3", "name": "Паста и еда", "img": "cat3.png"},
+    {"id": "4", "name": "Пицца", "img": "cat4.png"},
+    {"id": "5", "name": "Завтрак", "img": "cat5.png"},
+    {"id": "6", "name": "Супы", 	"img":	"cat6.png"}
+  ],
+  "restaurants": [
+    {"id": "1", "img": "restor1.jpg"},
+    {"id": "2","img": "rest3.png"},
+    {"id": "3",  "img": "restor3.png"},
+    {"id": "4",  "img": "resto4.png"},
+    {"id": "5",  "img": "restor5.png"},
+    {"id": "6",  "img": "restor6.png"}
+  ]
+}

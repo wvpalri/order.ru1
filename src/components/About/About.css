@@ -1,0 +1,135 @@
+
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif; 
+  color: #03081F;
+}
+
+
+.about-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 30px;
+  margin-bottom: 50px;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #03081F;
+}
+
+.about-hero p {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+.about-stats-wrapper {
+  margin: 60px 0;
+}
+
+
+.about-mission {
+  margin-top: 80px;
+}
+
+.mission-content {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mission-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.mission-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-content strong {
+  color: #fc8019;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.about-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+}
+
+.about-card h3 {
+  font-size: 24px;
+  color: #fc8019;
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+.about-footer-cta {
+  text-align: center;
+  margin-top: 100px;
+  padding: 60px 20px;
+  background-color: #03081F;
+  border-radius: 30px;
+  color: white;
+}
+
+.about-footer-cta h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #fc8019;
+  color: white;
+  border: none;
+  padding: 18px 45px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #e67300;
+  transform: scale(1.05);
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 768px) {
+  .about-hero h1 { font-size: 32px; }
+  .about-cards { grid-template-columns: 1fr; }
+  .about-footer-cta h2 { font-size: 24px; }
+}

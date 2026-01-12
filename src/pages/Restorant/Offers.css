@@ -1,0 +1,96 @@
+.offers-section {
+    padding: 40px 10%;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.offers-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; 
+    padding-bottom: 10px;
+}
+
+
+.offers-grid::-webkit-scrollbar {
+    height: 4px;
+}
+.offers-grid::-webkit-scrollbar-thumb {
+    background: #eee;
+    border-radius: 10px;
+}
+
+.offer-card {
+    min-width: 350px;
+    height: 200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-discount-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #000;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.offer-subtitle {
+    color: #ff8c00; 
+    font-size: 12px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.offer-title {
+    color: #fff;
+    font-size: 20px;
+    margin: 5px 0 0 0;
+    font-weight: bold;
+}
+
+.offer-plus-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    color: #008037; 
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+
+.offer-plus-btn:hover {
+    background: #f0f0f0;
+    transform: scale(1.1);
+}

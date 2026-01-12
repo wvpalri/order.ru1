@@ -1,0 +1,181 @@
+/* Основной контейнер страницы */
+body {
+    background-color: red !important;
+}
+.cart-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Заголовок и кнопка назад */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.cart-header h1 {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+}
+
+.back-link {
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #ffbc0d; /* Желтый цвет McDonald's */
+}
+
+/* Карточка товара */
+.cart-item {
+    display: flex;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #222;
+}
+
+.item-desc {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Управление количеством */
+.cart-controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 20px;
+    padding: 5px 15px;
+    gap: 15px;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    padding: 0 5px;
+}
+
+.qty-number {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.delete-item-btn {
+    background: none;
+    border: none;
+    color: #e3000b; /* Красный цвет */
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+/* Итого по позиции */
+.item-subtotal {
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Блок общего итога */
+.cart-summary {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.summary-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.total-amount {
+    font-weight: 800;
+    color: #e3000b;
+}
+
+/* Кнопка оформления */
+.checkout-btn {
+    background-color: #ffbc0d;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #f1af00;
+    transform: translateY(-2px);
+}
+
+/* Пустая корзина */
+.empty-message {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+}

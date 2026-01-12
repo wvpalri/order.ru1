@@ -1,0 +1,187 @@
+.hero-section {
+    max-width: 1500px;
+    height: 500px;
+      margin:auto;
+    padding: 80px 5%;
+    background-color: #FBFBFB; 
+    align-items: center;
+  
+}
+.blok-hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+      gap: 50px;
+}
+
+.pre-header {
+    color: #4a4a4a;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main-headline {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 10px 0 30px 0;
+    color: #1a1a1a;
+}
+
+.highlight {
+    color: #ff8c00; 
+}
+
+.cta-text {
+    font-size: 20px;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+
+.search-form {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.postcode-input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+
+.search-btn {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #e57e00;
+}
+
+
+.hero-visuals {
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.visual-container {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    bottom: 80px;
+    left: 72px;
+    background-color: #ff8c00; 
+    border-top-left-radius: 60%;
+}
+.visual-container img{
+    width: 700px;
+}
+
+
+.main-image-placeholder {
+    position: absolute;
+    height: 100%;
+    width: auto; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+}
+
+
+.orange-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5; 
+    overflow: hidden;
+}
+
+.number {
+    position: absolute;
+    font-size: 200px;
+    font-weight: 900;
+    z-index: 6; 
+}
+
+.orange-overlay .number:nth-child(1) { top: 0; right: 20px; }
+.orange-overlay .number:nth-child(2) { top: 30%; right: -50px; }
+.orange-overlay .number:nth-child(3) { bottom: 50px; right: -80px; }
+
+
+
+.status-notification {
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    z-index: 20; 
+    transform: rotate(2deg);}
+
+.order-header {
+    font-weight: bold;
+    color: #1a1a1a;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.now {
+    font-size: 12px;
+    color: #ff8c00;
+    font-weight: normal;
+}
+
+.detail {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+
+.check-icon {
+    color: green;
+}
+
+.rider-icon {
+    color: #ff8c00;
+}
+
+
+.status-1 {
+    top: 100px;
+    right: 0;
+    transform: rotate(5deg);
+}
+
+.status-2 {
+    top: 50%;
+    right: -20px;
+}
+
+

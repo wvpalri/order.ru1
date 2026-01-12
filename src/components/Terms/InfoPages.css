@@ -1,0 +1,99 @@
+.info-page {
+  padding: 140px 20px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #000000;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+  background: linear-gradient(45deg, #ff9800, #f57c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  /* Сделали фон чуть заметнее */
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  border-color: #ff9800;
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(255, 152, 0, 0.15);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  color: #ff9800;
+  margin-bottom: 25px;
+}
+
+/* Заголовки внутри карточек — чисто белый */
+.info-card h3 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+/* Основной текст внутри карточек — теперь гораздо светлее */
+.info-card p {
+  color: #e2e8f0; /* Светло-серый/беловатый для отличной читаемости */
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.promo-badge {
+  margin-top: 25px;
+  background: rgba(255, 152, 0, 0.2);
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: #ffb74d; /* Светло-оранжевый для текста внутри бейджа */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Стили для карты сайта */
+.sitemap-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.sitemap-section h3 {
+  color: #ff9800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.sitemap-section ul li a {
+  color: #cbd5e1; /* Светлые ссылки */
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 1.1rem;
+}
+
+.sitemap-section ul li a:hover {
+  color: #ff9800;
+}
